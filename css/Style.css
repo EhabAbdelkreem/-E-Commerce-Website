@@ -1,0 +1,57 @@
+body{
+    height: 100%;
+    background-color: #f3e8ea;
+}
+#background{
+    background-image: url("../img2/background.png");
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-color: #72c4eb;
+}
+
+#Registration_Container{
+    background: rgba(233, 216, 216, 0.5);
+    border-radius: 15px;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    margin-left: 35%;
+    padding: 3%;
+}
+
+#Registration_Container>h4{
+    color:#dd4944;
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+button[type="submit"]{
+    width:97%;
+    background-color: #751f0a ;
+    border-color: #94040b ;
+}
+
+button[type="submit"]:hover{
+    background-color: #f33b72 ;
+    border-color: #f14663 ;
+}
+
+#Login_Container{
+    background: rgba(233, 216, 216, 0.5);
+    border-radius: 15px;
+    width: 30%;
+    height: 50%;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 11%;
+    padding: 3%;
+}
+
+#Login_Container>h4{
+    color:#dd4944;
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 10%;
+}

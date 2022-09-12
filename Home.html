@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./img2/background.png" type="image/x-icon">    
+    <link rel="shortcut icon" href="./img2/background.png" type="image/x-icon">  
+    <title>Online Shopping Cart</title>
+    <link rel="stylesheet" href="./css/css2.css">
+  </head>
+  <body>   
+ <header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+        <a href="Home.html"class="header__title"><h1 class="header__title">
+        Shopping
+        <span class="header__subtitle">
+          <div class="navbar">
+            <a href="Home.html">Home</a>
+            <input type="text" class="search-item" id="search-item" placeholder="search product" onkeyup="search()">
+            <span id="Name" onClick="logout()" title="Click to logout"
+            onmouseover="document.body.style.cursor = 'pointer'"
+            onmouseout="document.body.style.cursor = 'auto'"class="name">
+          </span>
+
+          </span>
+          </a>
+          </div>
+      </h1>
+    </div>
+    
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+   </svg>Cart basket</button>
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="menu"id="menu">
+  <input type="button"class="categ" id="categ">
+  <div style="display: none;"id="ulcateg"class="ulcateg">
+    <a href="./html/electronics.html"target="_blank">Electronics</a>
+    <a href="./html/bag.html"target="_blank">bags</a>
+    <a href="./html/tv.html"target="_blank">Tv screen</a>
+    <a href="./html/mobil.html"target="_blank">Mobiles</a>
+    <a href="./html/fashion.html"target="_blank">Fashion</a>
+    <a href="./html/games.html"target="_blank">Games</a>
+  </div>
+</div>
+  <div class="header__main">
+    <img src="./img2/1.jpg" class="card__image"id="img1" alt="" width="200"height="100">
+    <div class="titl">
+      <p>
+      Shopping our</p> <p>product easily</p><p>with reduce 30%</p>
+    </div>
+  </div>
+  <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+ </svg></div>
+</header>
+<main class="container page-content" id="contain">
+  <div class="grid" id="grid">
+    <div class="card">
+      <img src="./img/1.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">HUAWEI MateBook D 14 Intel Core i5</h4>
+        <p class="card__price">$600</p>
+        <button class="card__btn add-to-cart" data-id="6">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/2.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">HP Laptop 250 G8 4L1Q8UT#ABA</h4>
+        <p class="card__price">$700</p>
+        <button class="card__btn add-to-cart" data-id="7">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/3.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">HUAWEI MATEBOOK 13 |I5-10210U|</h4>
+        <p class="card__price">$450</p>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/4.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Lenovo IdeaPad 5 Laptop11th</h4>
+        <p class="card__price">$550</p>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/5.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">ASUS Vivobook X571LH-BQ007T</h4>
+        <p class="card__price">$500</p>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/6.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">HP 15-dw3019ne Laptop</h4>
+        <p class="card__price">$800</p>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/7.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Irwin 2017825 Defender</h4>
+        <p class="card__price">$200</p>
+        <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+        <!--.card-->
+        <div class="card">
+          <img src="./img/8.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Lowepro Flipside 500 Lowepro</h4>
+            <p class="card__price">$50</p>
+            <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+          </div>
+        </div>
+            <!--.card-->
+    <div class="card">
+      <img src="./img/9.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Laptop Backpack up to 15.6</h4>
+        <p class="card__price">$50</p>
+        <button class="card__btn add-to-cart" data-id="14">Add to Cart</button>
+      </div>
+    </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/10.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Thule Accent Laptop Bag 15.6</h4>
+            <p class="card__price">$50</p>
+            <button class="card__btn add-to-cart" data-id="15">Add to Cart</button>
+          </div>
+        </div>
+            <!--.card-->
+    <div class="card">
+      <img src="./img/11.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Waterproof Laptop Travel Backpack</h4>
+        <p class="card__price">$50</p>
+        <button class="card__btn add-to-cart" data-id="16">Add to Cart</button>
+      </div>
+    </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/12.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">RioGree Laptop Backpack 15.6 Inch</h4>
+            <p class="card__price">$50</p>
+            <button class="card__btn add-to-cart" data-id="17">Add to Cart</button>
+          </div>
+        </div>
+        <!--.card-->
+    <div class="card">
+      <img src="./img/13.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Itel A321 - 32 Inch HD LED TV</h4>
+        <p class="card__price">$500</p>
+        <button class="card__btn add-to-cart" data-id="18">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/14.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Tornado 32ER9300E LED TV</h4>
+        <p class="card__price">$300</p>
+        <button class="card__btn add-to-cart" data-id="19">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+        <!--.card-->
+        <div class="card">
+          <img src="./img/15.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">65-inch 4K UHD LED Smart ThinQ TV</h4>
+            <p class="card__price">$300</p>
+            <button class="card__btn add-to-cart" data-id="20">Add to Cart</button>
+          </div>
+        </div>
+            <!--.card-->
+    <div class="card">
+      <img src="./img/16.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">ATA tv32 inch LED ATA tv32 inch LED</h4>
+        <p class="card__price">$550</p>
+        <button class="card__btn add-to-cart" data-id="21">Add to Cart</button>
+      </div>
+    </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/17.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Samsung 43-inch Full HD Smart TV</h4>
+            <p class="card__price">$350</p>
+            <button class="card__btn add-to-cart" data-id="22">Add to Cart</button>
+          </div>
+        </div>
+            <!--.card-->
+    <div class="card">
+      <img src="./img/18.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Contex led 32 innch tv Contex led 32 innch tv</h4>
+        <p class="card__price">$450</p>
+        <button class="card__btn add-to-cart" data-id="23">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+     <div class="card">
+      <img src="./img/19.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">IPhone 11 Pro Review: 11 Professional </h4>
+        <p class="card__price">$750</p>
+        <button class="card__btn add-to-cart" data-id="24">Add to Cart</button>
+      </div>
+    </div>
+     <!--.card-->
+     <div class="card">
+      <img src="./img/20.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">iPhone 12 Pro Series iPhone 12 Pro Series</h4>
+        <p class="card__price">$650</p>
+        <button class="card__btn add-to-cart" data-id="25">Add to Cart</button>
+      </div>
+    </div>
+   <!--.card-->
+   <div class="card">
+    <img src="./img/21.jpg" alt="" class="card__image">
+    <div class="card__info">
+      <h4 class="card__title">iPhone 12 Pro review iPhone 12 Pro review</h4>
+      <p class="card__price">$550</p>
+      <button class="card__btn add-to-cart" data-id="26">Add to Cart</button>
+    </div>
+  </div>
+        <!--.card--> 
+        <div class="card">
+          <img src="./img/22.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Apple's 3 brand-new iPhones</h4>
+            <p class="card__price">$450</p>
+            <button class="card__btn add-to-cart" data-id="27">Add to Cart</button>
+          </div>
+        </div> 
+        <!--.card-->
+        <div class="card">
+          <img src="./img/23.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Iphone 13 Pro max brand apple</h4>
+            <p class="card__price">$350</p>
+            <button class="card__btn add-to-cart" data-id="28">Add to Cart</button>
+          </div>
+        </div> 
+        <!--.card-->
+        <div class="card">
+          <img src="./img/24.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Apple iPad Mini 3 MGYR2TU/A Taplet Pc</h4>
+            <p class="card__price">$250</p>
+            <button class="card__btn add-to-cart" data-id="29">Add to Cart</button>
+          </div>
+        </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/25.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Long Fashion Dress-green Long Fashion Dress-green</h4>
+            <p class="card__price">$150</p>
+            <button class="card__btn add-to-cart" data-id="30">Add to Cart</button>
+          </div>
+        </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/26.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Dress New Retro Stitching A-line Dotl Dress New Retro</h4>
+            <p class="card__price">$250</p>
+            <button class="card__btn add-to-cart" data-id="31">Add to Cart</button>
+          </div>
+        </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/27.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Aomei Birthday Party Casual Female Dress Aomei Birthday</h4>
+            <p class="card__price">$350</p>
+            <button class="card__btn add-to-cart" data-id="32">Add to Cart</button>
+          </div>
+        </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/28.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Half High Collar Long Sleeve Printed Stitching </h4>
+            <p class="card__price">$450</p>
+            <button class="card__btn add-to-cart" data-id="33">Add to Cart</button>
+          </div>
+        </div>
+         <!--.card-->
+         <div class="card">
+          <img src="./img/29.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Female Office Long Gown Dresses Party Ladies</h4>
+            <p class="card__price">$550</p>
+            <button class="card__btn add-to-cart" data-id="34">Add to Cart</button>
+          </div>
+        </div>
+        <!--.card-->
+        <div class="card">
+          <img src="./img/30.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">VEJARO D03 Office Lady Classy Casual Short Sleeve </h4>
+            <p class="card__price">$1500</p>
+            <button class="card__btn add-to-cart" data-id="35">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/31.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Sony Marvel's Spider-Man:Game  Sony Marvel's </h4>
+            <p class="card__price">$900</p>
+            <button class="card__btn add-to-cart" data-id="36">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/32.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Sony PlayStation game fifa 21 Sony PlayStation</h4>
+            <p class="card__price">$750</p>
+            <button class="card__btn add-to-cart" data-id="37">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/33.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Sony PlayStation 5 Console + Cyberpunk 2077</h4>
+            <p class="card__price">$850</p>
+            <button class="card__btn add-to-cart" data-id="38">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/34.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Rockstar Games GTA V - PS4 Rockstar Games GTA V</h4>
+            <p class="card__price">$1000</p>
+            <button class="card__btn add-to-cart" data-id="39">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/35.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Activision Call Of Duty: Vanguard Ps4 Activision Call Of Duty</h4>
+            <p class="card__price">$900</p>
+            <button class="card__btn add-to-cart" data-id="40">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./img/36.jpg" alt="" class="card__image">
+          <div class="card__info">
+            <h4 class="card__title">Santa Monica Studio God Of War Santa Monica Studio</h4>
+            <p class="card__price">$1100</p>
+            <button class="card__btn add-to-cart" data-id="41">Add to Cart</button>
+          </div>
+        </div>
+  </div>
+</main>   
+  <footer class="footer">
+    <div class="container footer__container">
+      
+      <div class="copyright">
+                    
+          <p name="copyright">All rights reserved &copy; 2022.</p>
+        
+      </div>    
+    
+    <div class="image">
+        <a href="# "><img src="../img2/8.png" height=30px width=30px></a>
+        <a href="# "><img src="../img2/9.png" height=30px width=30px></a>
+        <a href="# "><img src="../img2/10.png" height=30px width=30px></a>
+        <a href="# "><img src="../img2/11.png" height=30px width=30px></a>
+        <a href="# "><img src="../img2/12.png" height=30px width=30px></a>
+    </div>
+    </div>
+  </footer>
+<script>
+var start=1;
+
+var l=0;
+window.onload=setInterval(mn,1500);
+function mn(){
+
+    var imagdat;
+    if(start==1){
+    imagdat="./img2/1.jpg";
+    }
+    else if(start==2){
+    imagdat="./img2/2.webp";
+    }
+    else if(start==3){
+    imagdat="./img2/3.jpg";
+    }
+    else if(start==4){
+    imagdat="./img2/4.jpg";
+    }
+    else{
+    start=1;
+    imagdat="./img2/1.jpg";
+
+    }
+
+    document.getElementById("img1").src=""+imagdat;
+    start++;
+    }
+  </script>
+  <script>
+  function logout() {
+
+    clearCart();
+  
+    const prices = getCartItemPrices();
+    
+    totalPriceContainer.innerHTML = '<span class="total">Total: $0</span>';
+  
+    window.close();
+
+  }
+  </script>
+  <script>
+  const btncateg=document.getElementById("categ");
+  const ulcateg=document.getElementById("ulcateg");
+  const menu=document.getElementById("menu");
+   menu.onmouseover=function(){
+  ulcateg.style.display="inline-block";
+  btncateg.style.transform="rotateY(50deg)";
+
+   }
+   menu.onmouseout=function(){
+   ulcateg.style.display="none";
+   btncateg.style.transform="rotateX(50deg)";
+
+
+   }
+  </script>
+    <script type="module" src="./js/jshome.js"></script>
+    <script src="./js/search.js"></script>
+
+  </body>
+</html>

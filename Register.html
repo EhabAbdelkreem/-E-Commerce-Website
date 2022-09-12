@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/Style.css">
+</head>
+<body>
+    <div id="background">
+        <div id="Registration_Container">
+            <h4>Registration</h4>
+            <form action="Home.html">
+                <div class="form-group row">
+                    <label for="FullName" class="col-sm-4 col-form-label">Full Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="FullName" name="FullName" placeholder="michael malak">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="Email" class="col-sm-4 col-form-label">Email</label>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="Email" name="Email" placeholder="email@example.com">
+                      <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="Password" class="col-sm-4 col-form-label">Password</label>
+                    <div class="col-sm-8">
+                      <input type="password" class="form-control" id="Password" name="Password" placeholder="**********">
+                      <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="Address" class="col-sm-4 col-form-label">Address</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="Address" name="Address" placeholder="minya" required>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <label for="Phone" class="col-sm-4 col-form-label">Phone</label>
+                    <div class="col-sm-8">
+                      <input type="text" class="form-control" id="Phone" name="Phone" placeholder="01011122233">
+                      <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit" id="submitbtn" class="btn btn-primary">Submit</button>
+                <div style="text-align: center;font-size: 15px;">
+                    <a href="login.html"style="text-align: center;color: rgb(170, 57, 57)">already a user?</a>
+                    <p><a href="Home.html" style="font-size: 20px;color: rgb(170, 57, 57);">Enter As aguest</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script type='module' src="./js/Registration.js"></script>
+</body>
+</html>

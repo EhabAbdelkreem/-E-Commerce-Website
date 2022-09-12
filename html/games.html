@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Shopping Cart</title>
+
+    <link rel="stylesheet" href="../css/css2.css">
+  
+  </head>
+  <body>
+ <header class="intro">
+
+ </header>
+  
+      
+ <main>
+  <header class="header">
+    <div class="container header__top">
+      <div class="header__logo">
+        <div class="header__cart">
+          <ul>
+            <li class="header__submenu" id="submenu">
+              <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+                </svg>Cart basket</button>
+              <div id="shopping-cart" class="shopping-cart-container"style="margin-right: 1020px;">
+                <table id="cart-content">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <p class="total-container" id="total-price"></p>
+                <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+                <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+          <a href="../Home.html"class="header__title"><h1 class="header__title">
+          Shopping
+          <span class="header__subtitle">
+            Online
+            </span>
+            </a>
+            </div>
+        </h1>
+      </div>
+    <div class="titl2"style="background-image:url('../img2/6.webp')">
+      <p class="titl3">
+        shopping our product easily with reduce 30%
+      </p>
+    </div>
+    <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+  </svg></div>
+  </header>
+<main class="container page-content">
+        <div class="grid" id="grid">
+                <!--.card-->
+              <div class="card">
+                <img src="../img/31.jpg" alt="" class="card__image">
+                <div class="card__info">
+                  <h4 class="card__title">Sony Marvel's Spider-Man:Game 2022 new game</h4>
+                  <p class="card__price">$900</p>
+                  <button class="card__btn add-to-cart" data-id="36">Add to Cart</button>
+                </div>
+              </div>
+                <!--.card-->
+              <div class="card">
+                <img src="../img/32.jpg" alt="" class="card__image">
+                <div class="card__info">
+                  <h4 class="card__title">Sony PlayStation game fifa 21 PlayStation new</h4>
+                  <p class="card__price">$750</p>
+                  <button class="card__btn add-to-cart" data-id="37">Add to Cart</button>
+                </div>
+              </div>
+                <!--.card-->
+              <div class="card">
+                <img src="../img/33.jpg" alt="" class="card__image">
+                <div class="card__info">
+                  <h4 class="card__title">Sony PlayStation 5 Console + Cyberpunk 2077</h4>
+                  <p class="card__price">$850</p>
+                  <button class="card__btn add-to-cart" data-id="38">Add to Cart</button>
+                </div>
+              </div>
+                <!--.card-->
+              <div class="card">
+                <img src="../img/34.jpg" alt="" class="card__image">
+                <div class="card__info">
+                  <h4 class="card__title">Rockstar Games GTA V - PS4 new games 2022 </h4>
+                  <p class="card__price">$1000</p>
+                  <button class="card__btn add-to-cart" data-id="39">Add to Cart</button>
+                </div>
+              </div>
+                <!--.card-->
+              <div class="card">
+                <img src="../img/35.jpg" alt="" class="card__image">
+                <div class="card__info">
+                  <h4 class="card__title">Activision Call Of Duty: Vanguard Ps4 Activision PlayStation</h4>
+                  <p class="card__price">$900</p>
+                  <button class="card__btn add-to-cart" data-id="40">Add to Cart</button>
+                </div>
+              </div>
+                <!--.card-->
+              <div class="card">
+                <img src="../img/36.jpg" alt="" class="card__image">
+                <div class="card__info">
+                  <h4 class="card__title">Santa Monica Studio God Of War 2022 games Monica</h4>
+                  <p class="card__price">$1100</p>
+                  <button class="card__btn add-to-cart" data-id="41">Add to Cart</button>
+                </div>
+              </div>
+       </div>
+     </main>
+     <footer class="footer">
+      <div class="container footer__container">
+        
+       
+      </div>
+    </footer>    
+    <script>
+      function logout() {
+    
+        clearCart();
+      
+        const prices = getCartItemPrices();
+        
+        totalPriceContainer.innerHTML = '<span class="total">Total: $0</span>';
+      
+        window.close();
+    
+      }
+      </script>
+     <script type="module" src="../js/jshome.js"></script>   
+  </body>
+</html>

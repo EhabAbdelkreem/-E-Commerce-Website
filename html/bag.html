@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Shopping Cart</title>
+
+    <link rel="stylesheet" href="../css/css2.css">
+  
+  </head>
+  <body>
+ <header class="intro">
+
+ </header>
+  
+      
+ <main>
+  <header class="header">
+    <div class="container header__top">
+      <div class="header__logo">
+        <div class="header__cart">
+          <ul>
+            <li class="header__submenu" id="submenu">
+              <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+                </svg>Cart basket</button>
+              <div id="shopping-cart" class="shopping-cart-container"style="margin-right: 1020px;">
+                <table id="cart-content">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+                <p class="total-container" id="total-price"></p>
+                <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+                <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+          <a href="../Home.html"class="header__title"><h1 class="header__title">
+          Shopping
+          <span class="header__subtitle">
+            Online
+            </span>
+            </a>
+            </div>
+        </h1>
+      </div>
+    <div class="titl2"style="background-image:url('../img2/2.webp')">
+      <p class="titl3">
+        shopping our product easily with reduce 30%
+      </p>
+    </div>
+    <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+  </svg></div>
+  </header>
+<main class="container page-content">
+        <div class="grid" id="grid">
+         <div class="card">
+           <img src="../img/7.jpg" alt="" class="card__image">
+           <div class="card__info">
+             <h4 class="card__title">Irwin 2017825 Defender</h4>
+             <p class="card__price">$200</p>
+             <button class="card__btn add-to-cart" data-id="12">Add to Cart</button>
+           </div>
+         </div>
+         <!--.card-->
+             <!--.card-->
+             <div class="card">
+               <img src="../img/8.jpg" alt="" class="card__image">
+               <div class="card__info">
+                 <h4 class="card__title">Lowepro Flipside 500 Lowepro Flipside 500</h4>
+                 <p class="card__price">$50</p>
+                 <button class="card__btn add-to-cart" data-id="13">Add to Cart</button>
+               </div>
+             </div>
+                 <!--.card-->
+         <div class="card">
+           <img src="../img/9.jpg" alt="" class="card__image">
+           <div class="card__info">
+             <h4 class="card__title">Laptop Backpack up to 15.6</h4>
+             <p class="card__price">$50</p>
+             <button class="card__btn add-to-cart" data-id="14">Add to Cart</button>
+           </div>
+         </div>
+             <!--.card-->
+             <div class="card">
+               <img src="../img/10.jpg" alt="" class="card__image">
+               <div class="card__info">
+                 <h4 class="card__title">Thule Accent Laptop Bag 15.6</h4>
+                 <p class="card__price">$50</p>
+                 <button class="card__btn add-to-cart" data-id="15">Add to Cart</button>
+               </div>
+             </div>
+                 <!--.card-->
+         <div class="card">
+           <img src="../img/11.jpg" alt="" class="card__image">
+           <div class="card__info">
+             <h4 class="card__title">Waterproof Laptop Travel Backpack</h4>
+             <p class="card__price">$50</p>
+             <button class="card__btn add-to-cart" data-id="16">Add to Cart</button>
+           </div>
+         </div>
+             <!--.card-->
+             <div class="card">
+               <img src="../img/12.jpg" alt="" class="card__image">
+               <div class="card__info">
+                 <h4 class="card__title">RioGree Laptop Backpack 15.6 Inch</h4>
+                 <p class="card__price">$50</p>
+                 <button class="card__btn add-to-cart" data-id="17">Add to Cart</button>
+               </div>
+             </div>
+       </div>
+     </main>
+     <footer class="footer">
+      <div class="container footer__container">
+        
+       
+      </div>
+    </footer>    
+    <script>
+      function logout() {
+    
+        clearCart();
+      
+        const prices = getCartItemPrices();
+        
+        totalPriceContainer.innerHTML = '<span class="total">Total: $0</span>';
+      
+        window.close();
+    
+      }
+      </script>
+     <script type="module"src="../js/jshome.js"></script>   
+  </body>
+</html>
